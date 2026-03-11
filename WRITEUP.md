@@ -1,12 +1,36 @@
-# Write-up Template
+Analyze, choose, and justify the appropriate resource option for deploying the app
+Virtual Machine (VM)
 
-### Analyze, choose, and justify the appropriate resource option for deploying the app.
+Cost:
+A Virtual Machine can be more expensive because it runs continuously and requires paying for compute resources even when the application is idle.
 
-*For **both** a VM or App Service solution for the CMS app:*
-- *Analyze costs, scalability, availability, and workflow*
-- *Choose the appropriate solution (VM or App Service) for deploying the app*
-- *Justify your choice*
+Scalability:
+Scaling a VM requires manual configuration such as creating additional VMs and setting up load balancing.
 
-### Assess app changes that would change your decision.
+Availability:
+Availability must be managed manually with monitoring, backups, and failover configurations.
 
-*Detail how the app and any other needs would have to change for you to change your decision in the last section.* 
+Workflow:
+Deployment requires manual setup of the server environment, installing dependencies, and maintaining the system.
+
+App Service
+
+Cost:
+Azure App Service provides low-cost plans and even free tiers suitable for small web applications.
+
+Scalability:
+App Service supports easy scaling directly from the Azure portal.
+
+Availability:
+It is a managed service, so Azure handles infrastructure maintenance and reliability.
+
+Workflow:
+Deployment is easier because it integrates with GitHub and supports automatic deployment.
+
+Chosen Solution
+
+App Service was chosen because it simplifies deployment and reduces the need to manage infrastructure. It allows easy configuration, automated deployment, and built-in monitoring, which makes it ideal for this CMS application.
+
+Assess app changes that would change your decision
+
+If the application required more control over the operating system, custom server configurations, or complex infrastructure management, a Virtual Machine would be more suitable. In such cases, a VM would provide greater flexibility and control over the environment.
